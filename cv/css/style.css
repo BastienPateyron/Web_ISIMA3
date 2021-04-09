@@ -3,14 +3,16 @@ body {
     font-family: 'raleway';
 }
 
+/*** Header ***/
 header {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    font-size: x-large;
+    font-size: large;
     color: white;
     background-color: #183962;
     margin: 2rem 0rem;
+    padding: 0rem 1rem;
 }
 
 header .title {
@@ -22,12 +24,29 @@ header > .denomination {
     flex-direction: column;
 }
 
+header > .denomination > h2 {
+    color: white;
+    margin-bottom: 0;
+}
+
 .myphoto {
     width: 10rem;
     height: 10rem;
     border-radius: 50%;
-    margin: -1rem;
+    margin: -1rem 1rem;
     border: solid 5px;
+}
+
+h2 {
+    color: #183962;
+}
+
+/*** Content ***/
+#content {
+    display: flex;
+    flex-direction: column;
+    /* align-items: center; */
+    margin: 0 15%;
 }
 
 /*
