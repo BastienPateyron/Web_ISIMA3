@@ -45,7 +45,7 @@ h2 {
 #content {
     display: flex;
     flex-direction: column;
-    margin: 0 15%;
+    margin: 0 10%;
 }
 
 #informations > div {
@@ -60,6 +60,19 @@ h2 {
     height: 26px;
     margin-right: 1rem;
 }
+
+#langues p {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+#langues .icon {
+    width: 26px;
+    height: 26px;
+    margin-right: 1rem;
+}
+
 /*
 .experience {
     
