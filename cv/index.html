@@ -5,17 +5,19 @@
         <meta name="language" content="fr-FR" >
         <meta name="author" content="Bastien Pateyron">
         <meta name="description" content="Page d'accueil du Portfolio de Bastien Pateyron étudiant en informatique">
-        <link rel ="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="css/normalize.css" type="text/css">
+        <link rel='stylesheet' href="https://fonts.googleapis.com/css?family=Raleway">
+        <link rel="stylesheet" href="css/style.css" type="text/css">
         <title>CV Bastien Pateyron</title>
     </head>
     <body>
         <header>
-            <div>Bastien PATEYRON</div>
+            <h1 class="title">Bastien PATEYRON</h1>
             <img class="myphoto" src="images/photo.jpg" title="photo" alt="photo"/>
-            <p>
-                <div>Etudiant ingénieur informaticien</div>
-                <div>Réseaux et sécurité, dernière année</div>
-            </p>
+            <div class="denomination">
+                <p class="title">Etudiant ingénieur informaticien</p>
+                <p>Réseaux et sécurité, dernière année</p>
+            </div>
         </header>
         <div id="content">
             <section id="profil">
@@ -47,17 +49,17 @@
             </section>
             <section id="formation">
                 <p class="title">Formation</p>
-                <p><div>2018 - Aujourd'hui</div><div>Ecole d'ingénieurs en informatique</div><div>ISIMA, CLermont-Ferrand</div></p>
-                <p><div>2016 - 2018</div><div>L1, L2 Informatique</div><div>Université Clermont Auvergne</div></p>
+                <div><p>2018 - Aujourd'hui</p><p>Ecole d'ingénieurs en informatique</p><p>ISIMA, CLermont-Ferrand</p></div>
+                <div><p>2016 - 2018</p><p>L1, L2 Informatique</p><p>Université Clermont Auvergne</p></div>
             </section>
             <section id="experiences-pro">
                 <p class="title">Expériences professionnelles</p>
-                <p class="experience">
-                    <div class="date-range">Septembre 2020 - Septembre 2021</div>
-                    <div class="type">Alternance</div>
-                    <div class="company">be-ys Cloud</div>
-                    <div class="title">écurisation d'un site web</div>
-                    <div class="place">Clermont-Ferrand</div>
+                <div class="experience">
+                    <p class="date-range">Septembre 2020 - Septembre 2021</p>
+                    <p class="type">Alternance</p>
+                    <p class="company">be-ys Cloud</p>
+                    <p class="title">écurisation d'un site web</p>
+                    <p class="place">Clermont-Ferrand</p>
                     <ul class="tasks">
                         <li>Analyse de risques EBIOS RM</li>
                         <li>Infrastructure as Code</li>
@@ -73,13 +75,13 @@
                         <li>Ansible</li>
                         <li>EBIOS RM</li>
                     </ul>
-                </p>
-                <p class="experience">
-                    <div class="date-range">Mai 2020 - Août 2020</div>
-                    <div class="type">Stage</div>
-                    <div class="company">be-ys Security Centers</div>
-                    <div class="title">Création d'une plateforme de hacking</div>
-                    <div class="place">Clermont-Ferrand</div>
+                </div>
+                <div class="experience">
+                    <p class="date-range">Mai 2020 - Août 2020</p>
+                    <p class="type">Stage</p>
+                    <p class="company">be-ys Security Centers</p>
+                    <p class="title">Création d'une plateforme de hacking</p>
+                    <p class="place">Clermont-Ferrand</p>
                     <ul class="tasks">
                         <li>Conception de l'architecture</li>
                         <li>Gestion d'une orchestration de conteneurs docker</li>
@@ -90,13 +92,13 @@
                         <li>Django</li>
                         <li>Python</li>
                     </ul>
-                </p>
-                <p class="experience">
-                    <div class="date-range">Mai 2015 - Juillet 2015</div>
-                    <div class="type">Stage</div>
-                    <div class="company">Mairie de Commentry</div>
-                    <div class="title">Développement d'une application web de gestion des interventions</div>
-                    <div class="place">Commentry</div>
+                </div>
+                <div class="experience">
+                    <p class="date-range">Mai 2015 - Juillet 2015</p>
+                    <p class="type">Stage</p>
+                    <p class="company">Mairie de Commentry</p>
+                    <p class="title">Développement d'une application web de gestion des interventions</p>
+                    <p class="place">Commentry</p>
                     <ul class="tasks">
                         <li>Analyse fonctionnelle</li>
                         <li>Conception de la base de données</li>
@@ -107,12 +109,12 @@
                         <li>JavaScript</li>
                         <li>SQL</li>
                     </ul>
-                </p>
+                </div>
             </section>
             <section id="competences">
                 <p class="title">Compétences</p>
-                <p class="category">
-                    <div>Développement</div>
+                <div class="category">
+                    <p>Développement</p>
                     <ul class="skills">
                         <li>Python / Django</li>
                         <li>Java</li>
@@ -120,9 +122,9 @@
                         <li>C / C++</li>
                         <li>Git</li>
                     </ul>
-                </p>
-                <p class="category">
-                    <div>Infrastructure</div>
+                </div>
+                <div class="category">
+                    <p>Infrastructure</p>
                     <ul class="skills">
                         <li>Docker</li>
                         <li>Terraform</li>
@@ -131,14 +133,14 @@
                         <li>OpenStack</li>
                         <li>Cisco</li>
                     </ul>
-                </p>
-                <p class="category">
-                    <div>Sécurité</div>
+                </div>
+                <div class="category">
+                    <p>Sécurité</p>
                     <ul class="skills">
                         <li>EBIOS RM</li>
                         <li>Pentest web</li>
                     </ul>
-                </p>
+                </div>
             </section>
         </div>
     </body>
