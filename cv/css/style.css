@@ -55,9 +55,9 @@ h2 {
     margin: 1rem 0;
 }
 
-#informations .icon {
-    width: 26px;
-    height: 26px;
+.icon {
+    width: 32px;
+    height: 32px;
     margin-right: 1rem;
 }
 
@@ -67,10 +67,16 @@ h2 {
     align-items: center;
 }
 
-#langues .icon {
-    width: 26px;
-    height: 26px;
-    margin-right: 1rem;
+#interets div{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin: 1em 0;
+}
+
+#interets .icon {
+    width: 52px;
+    height: 52px;
 }
 
 /*
