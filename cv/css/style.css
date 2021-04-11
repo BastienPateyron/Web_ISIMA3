@@ -67,7 +67,7 @@ h2 {
     align-items: center;
 }
 
-#interets div{
+#interets div {
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -89,9 +89,10 @@ h2 {
     flex-direction: column;
     border-radius: 15px;
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
-    margin: 1rem 2rem;
+    margin: 1rem 1rem;
     padding: 1.5rem;
     width: 33%;
+    text-align: center;
 }
 
 .card .icon {
@@ -106,10 +107,19 @@ h2 {
     font-style: italic;
 }
 
-.type {
+.title, .company {
+    font-size: x-large;
+}
+
+.type, .tag {
     font-size: large;
     color: white;
-    background-color: #183962; 
+    background-color: #183962;
+    text-align: center;
+    width: min-content;
+    margin: 0 auto;
+    padding: 3px 10px;
+    border-radius: 5px;
 }
 
 
