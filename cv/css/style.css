@@ -87,6 +87,7 @@ h2 {
 .card {
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
     border-radius: 15px;
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
     margin: 1rem 1rem;
@@ -111,17 +112,34 @@ h2 {
     font-size: x-large;
 }
 
-.type, .tag {
+.type, .tags li {
     font-size: large;
     color: white;
     background-color: #183962;
     text-align: center;
     width: min-content;
+    height: min-content;
     margin: 0 auto;
     padding: 3px 10px;
     border-radius: 5px;
 }
 
+ul {
+    padding: 0;
+    list-style: none;
+}
+
+.tags {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+
+.tags li {
+    margin: 10px 0;
+    white-space: nowrap;
+}
 
 /*
 .experience {
