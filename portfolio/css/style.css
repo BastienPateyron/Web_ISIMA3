@@ -1,0 +1,18 @@
+body {
+    background-color: black;
+    font-family: 'raleway';
+    color: whitesmoke;
+}
+
+.navbar {
+    background-color: inherit;
+    color: inherit;
+}
+
+.navbar a {
+    color: inherit;     
+}
+
+#navbarNav {
+    justify-content: center;
+}
