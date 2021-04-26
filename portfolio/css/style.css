@@ -1,7 +1,13 @@
+:root {
+    --main-bg-color: black;
+    --main-color: whitesmoke;
+    --main-emphasize-color: #FCC38E;
+}
+
 body {
-    background-color: black;
+    background-color: var(--main-bg-color);
+    color: var(--main-color);
     font-family: 'raleway';
-    color: whitesmoke;
 }
 
 .navbar {
@@ -15,4 +21,43 @@ body {
 
 #navbarNav {
     justify-content: center;
+}
+
+.myphoto {
+    width: 20rem;
+    height: 20rem;
+    position: fixed;
+    bottom: 0;
+    right: 0;
+}
+
+.text-emphasize {
+    color: var(--main-emphasize-color);
+}
+
+.btn-primary {
+    background-color: var(--main-emphasize-color);
+    color: var(--main-bg-color);
+    border: none;
+}
+
+#social {
+    padding: 0;
+    margin: 1rem 0;
+}
+
+.icon {
+    width: 26px;
+    height: 26px;
+    margin: 0 0.5rem;
+}
+
+span.title {
+    font-weight:bold;
+    font-family:arial;
+    color:transparent;
+    font-size:100px;
+    text-shadow: 2px 2px 2px var(--main-bg-color), 2px 2px 2px #FFF, 2px 2px 2px #FFF, 2px 2px 2px #FFF, 2px 2px 2px #FFF;
+    position: fixed;
+    bottom: 0;
 }
