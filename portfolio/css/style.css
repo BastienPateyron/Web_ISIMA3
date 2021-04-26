@@ -28,7 +28,6 @@ body {
     height: 20rem;
     position: fixed;
     bottom: 0;
-    right: 0;
 }
 
 .text-emphasize {
@@ -60,4 +59,16 @@ span.title {
     text-shadow: 2px 2px 2px var(--main-bg-color), 2px 2px 2px #FFF, 2px 2px 2px #FFF, 2px 2px 2px #FFF, 2px 2px 2px #FFF;
     position: fixed;
     bottom: 0;
+    z-index: -1;
+}
+
+.card {
+    background-color: var(--main-bg-color);
+    border: 3px solid var(--main-emphasize-color);
+    border-radius: 8px;
+}
+
+.card-img-top {
+    width: 64px;
+    height: 64px;
 }
