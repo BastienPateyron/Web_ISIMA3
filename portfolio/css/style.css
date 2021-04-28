@@ -28,6 +28,8 @@ body {
     height: 20rem;
     position: fixed;
     bottom: 0;
+    left: 70%;
+    margin: auto;
 }
 
 .text-emphasize {
@@ -62,13 +64,85 @@ span.title {
     z-index: -1;
 }
 
+/* START Cards bootstrap */
+.card-deck {
+    justify-content: center;
+}
+
 .card {
     background-color: var(--main-bg-color);
     border: 3px solid var(--main-emphasize-color);
     border-radius: 8px;
+    margin: 1%;
+    width: 18rem;
+    padding-top: 12px;
 }
 
 .card-img-top {
     width: 64px;
     height: 64px;
+    margin: auto;
 }
+
+.card-text {
+    display: none;
+}
+
+/* END Cards bootstrap */
+
+/* START Flipcard
+/* The flip card container - set the width and height to whatever you want. We have added the border property to demonstrate that the flip itself goes out of the box on hover (remove perspective if you don't want the 3D effect */
+.flip-card {
+    width: 275px;
+    height: 300px;
+    perspective: 1000px; /* Remove this if you don't want the 3D effect */
+    margin: 1%;
+}
+
+/* This container is needed to position the front and back side */
+.flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+    border: 3px solid var(--main-emphasize-color);
+    border-radius: 8px;
+}
+
+/* Do an horizontal flip when you move the mouse over the flip box container */
+.flip-card:hover .flip-card-inner {
+    transform: rotateY(180deg);
+}
+
+/* Position the front and back side */
+.flip-card-front, .flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden; /* Safari */
+    backface-visibility: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    text-align: center;
+    padding: 1rem;
+}
+
+/* Style the front side (fallback if image is missing) */
+.flip-card-front {
+    background-color: var(--main-bg-color);
+    color: var(--main-color);
+    width: 100%;
+    height: 100%;
+}
+
+/* Style the back side */
+.flip-card-back {
+    background-color: var(--main-emphasize-color);
+    color: var(--main-bg-color);
+    transform: rotateY(180deg);
+} 
+
+  /* END Flipcards */
