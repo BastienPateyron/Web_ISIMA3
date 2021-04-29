@@ -10,9 +10,19 @@ body {
     font-family: 'raleway';
 }
 
+.fit-screen{
+    height: 83vh;
+}
+
+.fit-screen2{
+    height: 100vh;
+}
+
 .navbar {
     background-color: inherit;
     color: inherit;
+    padding:2vh;
+    margin-bottom: 15vh;
 }
 
 .navbar a {
@@ -23,12 +33,34 @@ body {
     justify-content: center;
 }
 
+h1{
+    font-size: 75px;
+    font-weight: bolder;
+    padding-top: 1%;
+    padding-bottom: 3%;
+}
+
+h1 + p {
+    font-size: 18px;
+    padding-bottom: 3%;
+}
+
+h2{
+    font-size: 40px;
+    padding-bottom: 6%;
+    padding-top: 3%;
+    text-align: center;
+}
+
+.btn-primary{
+    width:30%;
+    padding: 2%;
+    margin-bottom: 10%;
+}
+
 .myphoto {
     width: 20rem;
     height: 20rem;
-    position: fixed;
-    bottom: 0;
-    left: 70%;
     margin: auto;
 }
 
@@ -48,8 +80,8 @@ body {
 }
 
 .icon {
-    width: 26px;
-    height: 26px;
+    width: 30px;
+    height: 30px;
     margin: 0 0.5rem;
 }
 
@@ -59,39 +91,12 @@ span.title {
     color:transparent;
     font-size:100px;
     text-shadow: 2px 2px 2px var(--main-bg-color), 2px 2px 2px #FFF, 2px 2px 2px #FFF, 2px 2px 2px #FFF, 2px 2px 2px #FFF;
-    position: fixed;
+
     bottom: 0;
     z-index: -1;
 }
 
-/* START Cards bootstrap */
-.card-deck {
-    justify-content: center;
-}
-
-.card {
-    background-color: var(--main-bg-color);
-    border: 3px solid var(--main-emphasize-color);
-    border-radius: 8px;
-    margin: 1%;
-    width: 18rem;
-    padding-top: 12px;
-}
-
-.card-img-top {
-    width: 64px;
-    height: 64px;
-    margin: auto;
-}
-
-.card-text {
-    display: none;
-}
-
-/* END Cards bootstrap */
-
 /* START Flipcard */
-
 #flipcard-deck {
     justify-content: center;
 }

@@ -18,3 +18,10 @@ function displayCard(id) {
     if (["''", 'none'].includes(text.style.display) ) text.style.display = 'block'
     else text.style.display = 'none'
 }
+
+$('.nav').click(function() {
+    var id = $(this.id);
+    $('html, body').animate({
+        scrollTop: ($('#' + id).offset().top)
+    }, 1000);
+});
