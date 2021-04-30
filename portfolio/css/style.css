@@ -2,6 +2,7 @@
     --main-bg-color: black;
     --main-color: whitesmoke;
     --main-emphasize-color: #FCC38E;
+    --navbar-height: 10vh;
 }
 
 body {
@@ -10,30 +11,46 @@ body {
     font-family: 'raleway';
 }
 
-.fit-screen{
-    height: 83vh;
-}
-
-.fit-screen2{
-    height: 100vh;
-}
 
 .navbar {
-    background-color: inherit;
+    background-color: black;
     color: inherit;
-    padding:2vh;
-    margin-bottom: 15vh;
+    padding: 0;
+    height: var(--navbar-height);
 }
 
 .navbar a {
-    color: inherit;     
+    color: inherit;
+    font-size: 18px;     
+}
+
+.navbar a:hover {
+    color: var(--main-emphasize-color);
+    font-weight: bold;
+    font-size: 18px;
+    text-decoration: underline;     
+}
+
+.navbar-expand-lg .navbar-nav .nav-link{
+    padding-right: 1rem;
+    padding-left: 1rem;
 }
 
 #navbarNav {
     justify-content: center;
 }
 
-h1{
+/* #competences {
+    margin-top: 20vh;
+    margin-bottom: 20vh;
+}  */
+
+section {
+    padding-top: var(--navbar-height);
+    height: 100vh;
+}
+
+h1 {
     font-size: 75px;
     font-weight: bolder;
     padding-top: 1%;
@@ -45,17 +62,10 @@ h1 + p {
     padding-bottom: 3%;
 }
 
-h2{
+h2 {
     font-size: 40px;
-    padding-bottom: 6%;
-    padding-top: 3%;
+    /* padding-top: calc(var(--navbar-height)); */
     text-align: center;
-}
-
-.btn-primary{
-    width:30%;
-    padding: 2%;
-    margin-bottom: 10%;
 }
 
 .myphoto {
@@ -85,16 +95,6 @@ h2{
     margin: 0 0.5rem;
 }
 
-span.title {
-    font-weight:bold;
-    font-family:arial;
-    color:transparent;
-    font-size:100px;
-    text-shadow: 2px 2px 2px var(--main-bg-color), 2px 2px 2px #FFF, 2px 2px 2px #FFF, 2px 2px 2px #FFF, 2px 2px 2px #FFF;
-
-    bottom: 0;
-    z-index: -1;
-}
 
 /* START Flipcard */
 #flipcard-deck {
@@ -103,8 +103,8 @@ span.title {
 
 /* The flip card container - set the width and height to whatever you want. We have added the border property to demonstrate that the flip itself goes out of the box on hover (remove perspective if you don't want the 3D effect */
 .flip-card {
-    width: 275px;
-    height: 300px;
+    width: 375px;
+    height: 420px;
     perspective: 1000px; /* Remove this if you don't want the 3D effect */
     margin: 1%;
 }
@@ -156,3 +156,80 @@ span.title {
 } 
 
   /* END Flipcards */
+
+  .ligneFormation{
+      padding-top:10%;
+      padding-bottom:10%;
+  }
+  .borderBottom{
+      border-bottom: 1px solid;
+      border-color: var(--main-emphasize-color);
+  }
+  .diplome{
+      font-size: 20px;
+      font-weight: bolder;
+  }
+  .villeDiplome{
+      font-style: italic;
+      color:var(--main-emphasize-color)
+  }
+
+@media (min-width: 1200px) {
+    .btn-primary{
+    width:30%;
+    padding: 2%;
+    margin-bottom: 10%;
+    }
+
+    span.title {
+        font-weight:bold;
+        font-family:arial;
+        color:transparent;
+        font-size:100px;
+        text-shadow: 2px 2px 2px var(--main-bg-color), 2px 2px 2px #FFF, 2px 2px 2px #FFF, 2px 2px 2px #FFF, 2px 2px 2px #FFF;
+        bottom: 0;
+        z-index: -1;
+    }
+
+}
+
+@media (max-width: 1200px) {
+
+    .flip-card {
+        width: 275px;
+        height: 320px;
+        perspective: 1000px; /* Remove this if you don't want the 3D effect */
+        margin-bottom: 5%;
+    }
+}
+
+@media (max-width: 800px) { 
+    section {
+        padding-top: var(--navbar-height);
+        height: auto;
+    }
+}
+
+@media (max-width: 576px) { 
+    span.title {
+    font-weight:bold;
+    font-family:arial;
+    color:transparent;
+    font-size:50px;
+    text-shadow: 2px 2px 2px var(--main-bg-color), 2px 2px 2px #FFF, 2px 2px 2px #FFF, 2px 2px 2px #FFF, 2px 2px 2px #FFF;
+    bottom: 0;
+    z-index: -1;
+    text-align:center;
+    }
+
+    .myphoto {
+        display: none;
+    }
+
+    .flip-card {
+        width: 275px;
+        height: 320px;
+        perspective: 1000px; /* Remove this if you don't want the 3D effect */
+        margin-bottom: 5%;
+    }
+}
