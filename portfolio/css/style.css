@@ -40,11 +40,6 @@ body {
     justify-content: center;
 }
 
-/* #competences {
-    margin-top: 20vh;
-    margin-bottom: 20vh;
-}  */
-
 section {
     padding-top: var(--navbar-height);
     height: 100vh;
@@ -64,7 +59,6 @@ h1 + p {
 
 h2 {
     font-size: 40px;
-    /* padding-top: calc(var(--navbar-height)); */
     text-align: center;
 }
 
@@ -232,4 +226,10 @@ h2 {
         perspective: 1000px; /* Remove this if you don't want the 3D effect */
         margin-bottom: 5%;
     }
+}
+
+.carousel-item.active,
+.carousel-item-next,
+.carousel-item-prev{
+    display:block;
 }
