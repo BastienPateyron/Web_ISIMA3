@@ -1,7 +1,4 @@
 FROM nginx
-  
-# Setup app folder
-RUN mkdir -p /app
 
 COPY portfolio /usr/share/nginx/html
 
