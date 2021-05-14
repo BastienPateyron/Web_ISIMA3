@@ -26,13 +26,6 @@ jobs:
       
       - name: Log into registry
         run: echo "${{ secrets.GITHUB_TOKEN }}" | docker login ghcr.io -u ${{ github.actor }} --password-stdin
-      
-      # - name: Push the Docker image to the GitHub repository
-      #   uses: docker/build-push-action@v1
-      #   with:
-      #     run: | 
-      #       docker tag  portfolio ghcr.io/BastienPateyron/portfolio:latest
-      #       docker push ghcr.io/BastienPateyron/portfolio:latest
 
       - name: Push image
         run: |
