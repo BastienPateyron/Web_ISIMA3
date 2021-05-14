@@ -1,5 +1,0 @@
-- name: Set service state
-  service:
-    name: "docker"
-    enabled: "{{ docker_enabled }}"
-    state: "{{ docker_enabled | ternary('started', 'stopped') }}"
