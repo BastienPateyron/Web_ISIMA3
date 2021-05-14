@@ -1,0 +1,8 @@
+- include_tasks: "install/{{ ansible_facts.os_family }}.yml"
+
+- name: Install docker python modules
+  pip:
+    name:
+      - docker
+      - docker-compose
+    virtualenv: "{{ docker_virtualenv_path }}"

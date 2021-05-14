@@ -1,0 +1,49 @@
+driver:
+  name: docker
+
+provisioner:
+  name: ansible
+  log: true
+
+lint: |
+  set -e
+  yamllint -c .yamllint .
+  ansible-lint
+
+platforms:
+  # CentOS
+  - name: ${TOX_ENVNAME}-centos7
+    image: krzysztofmagosa/centos7-ansible-compat
+    pre_build_image: true
+    volumes:
+      - /sys/fs/cgroup:/sys/fs/cgroup:ro
+    privileged: true
+    command: /sbin/init
+    environment:
+      container: docker
+  # Debian 9/Stretch
+  - name: ${TOX_ENVNAME}-debian9
+    image: krzysztofmagosa/debian9-ansible-compat
+    pre_build_image: true
+    volumes:
+      - /sys/fs/cgroup:/sys/fs/cgroup:ro
+    privileged: true
+  # Debian 10/Buster
+  - name: ${TOX_ENVNAME}-debian10
+    image: krzysztofmagosa/debian10-ansible-compat
+    pre_build_image: true
+    volumes:
+      - /sys/fs/cgroup:/sys/fs/cgroup:ro
+    privileged: true
+  - name: ${TOX_ENVNAME}-ubuntu18
+    image: krzysztofmagosa/ubuntu18.04-ansible-compat
+    pre_build_image: true
+    volumes:
+      - /sys/fs/cgroup:/sys/fs/cgroup:ro
+    privileged: true
+  - name: ${TOX_ENVNAME}-ubuntu20
+    image: krzysztofmagosa/ubuntu20.04-ansible-compat
+    pre_build_image: true
+    volumes:
+      - /sys/fs/cgroup:/sys/fs/cgroup:ro
+    privileged: true
