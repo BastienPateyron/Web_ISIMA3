@@ -12,7 +12,6 @@ env:
 jobs:
 
   push:
-    needs: build
     runs-on: ubuntu-latest
     permissions:
       packages: write
