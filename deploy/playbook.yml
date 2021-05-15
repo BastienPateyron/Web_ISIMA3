@@ -69,6 +69,8 @@
         command: "{{ default_container_command }}"
         recreate: yes
         state: started
+        ports:
+          - "{{ default_container_application_port }}"
       with_sequence: count={{ create_containers }}
       become: true
       
