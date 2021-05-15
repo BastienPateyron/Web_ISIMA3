@@ -1,5 +1,6 @@
 image_name: portfolio
 registry: ghcr.io/bastienpateyron
+registry_url: "https://ghcr.io"
 
 create_containers: 2
 default_container_name: portfolio
