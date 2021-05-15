@@ -62,11 +62,20 @@
         source: pull
       become: true
 
+    - name: Remove old containers
+      docker_container:
+        name: "{{ default_container_name }}{{ item }}"
+        image: "{{ default_container_image }}"
+        state: absent
+        ports:
+          - "{{ default_container_application_port }}"
+      with_sequence: count={{ create_containers }}
+      become: true
+
     - name: Create and start containers
       docker_container:
         name: "{{ default_container_name }}{{ item }}"
         image: "{{ default_container_image }}"
-        command: "{{ default_container_command }}"
         recreate: yes
         state: started
         ports:
