@@ -67,7 +67,7 @@
         name: "{{ default_container_name }}{{ item }}"
         image: "{{ default_container_image }}"
         state: absent
-        ports:
+        exposed_ports:
           - "{{ default_container_application_port }}"
       with_sequence: count={{ create_containers }}
       become: true
@@ -91,5 +91,7 @@
         state: absent
       become: true
       changed_when: false
+
+    # TODO: Add a healthcheck for the container
     
 
