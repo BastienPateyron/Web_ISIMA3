@@ -15,10 +15,10 @@ jobs:
       with:
         ref: ${{ github.event.client_payload.sha }}
 
-    - name: Set up Python 2.7
+    - name: Set up Python 3.9
       uses: actions/setup-python@v1
       with:
-        python-version: 2.7
+        python-version: 3.9
 
     - name: Install dependencies for Ansible
       run: |
@@ -29,9 +29,9 @@ jobs:
       env:
         SSH_KEY: ${{ secrets.SSH_KEY_ANSIBLE }}
       run: |
-        mkdir .ssh
-        echo "$SSH_KEY" > .ssh/id_ed25519_Ansible
-        chmod 600 .ssh/id_ed25519_Ansible
+        mkdir ~/.ssh
+        echo "$SSH_KEY" > ~/.ssh/id_ed25519_Ansible
+        chmod 600 ~/.ssh/id_ed25519_Ansible
 
     - name: Run deploy playbook
       run: |

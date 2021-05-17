@@ -1,4 +1,4 @@
-name: Publish Portfolio on GitHub Registry
+name: Docker build
 
 on:
   push:
