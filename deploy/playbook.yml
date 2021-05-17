@@ -67,7 +67,7 @@
         name: "{{ default_container_name }}{{ item }}"
         image: "{{ default_container_image }}"
         state: absent
-        exposed_ports:
+        ports:
           - "{{ default_container_application_port }}"
       with_sequence: count={{ create_containers }}
       become: true
