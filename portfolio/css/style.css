@@ -188,21 +188,26 @@ h2 {
 }
 
 /* @media (max-width: 1200px) { */
-@media (max-height: 1000px) {
+@media (max-height: 900px) and (max-width: 900px){
     .flip-card {
         width: 275px;
         height: 320px;
         perspective: 1000px; /* Remove this if you don't want the 3D effect */
         margin-bottom: 5%;
     }
-}
 
-@media (max-width: 900px) { 
     section {
         padding-top: var(--navbar-height);
         height: auto;
     }
 }
+
+/* @media (max-width: 900px) { 
+    section {
+        padding-top: var(--navbar-height);
+        height: auto;
+    }
+} */
 
 @media (max-width: 576px) { 
     span.title {
