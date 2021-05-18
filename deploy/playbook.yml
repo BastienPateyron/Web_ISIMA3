@@ -103,5 +103,3 @@
       changed_when: false
 
     # TODO: Add a healthcheck for the container
-    
-
