@@ -6,9 +6,7 @@
     - vars/defaults.yml
 
   tasks:
-    # - name: Ping the machine
-    #   ping:
-    
+
     - name: Configure repository
       become: true
       yum_repository:
@@ -56,12 +54,6 @@
       become: true
       changed_when: false
 
-    - name: Pull Docker image
-      docker_image:
-        name: "{{ default_container_image }}"
-        source: pull
-      become: true
-
     - name: Remove old containers
       docker_container:
         name: "{{ default_container_name }}{{ item }}"
@@ -70,6 +62,20 @@
         ports:
           - "{{ default_container_application_port }}"
       with_sequence: count={{ create_containers }}
+      become: true
+
+    - name: Prune everything
+      docker_prune:
+        containers: yes
+        images: yes
+        networks: yes
+        volumes: yes
+        builder_cache: yes
+
+    - name: Pull Docker image
+      docker_image:
+        name: "{{ default_container_image }}"
+        source: pull
       become: true
 
     - name: Create and start containers
