@@ -27,7 +27,7 @@
         name: epel-release
         state: present
       become: true
-        
+
     - name: Install Docker and pip
       package:
         name: "{{ item }}"
@@ -35,12 +35,12 @@
       become: true
 
     - name: Start and enable the Docker daemon
-      service: 
+      service:
         name: docker
         state: started
-        enabled: yes
+        enabled: true
       become: true
-    
+
     - name: Remove pip tools
       pip:
         name: docker
@@ -71,10 +71,11 @@
       become: true
 
     - name: Remove old image
-      community.docker.docker_image:
+      docker_image:
         state: absent
         name: "{{ default_container_image }}"
         tag: latest
+      become: true
 
     - name: Pull Docker image
       docker_image:
@@ -86,13 +87,13 @@
       docker_container:
         name: "{{ default_container_name }}{{ item }}"
         image: "{{ default_container_image }}"
-        recreate: yes
+        recreate: true
         state: started
         ports:
           - "{{ default_container_application_port }}"
       with_sequence: count={{ create_containers }}
       become: true
-      
+
     - name: Logout from docker registry
       docker_login:
         registry_url: "{{ registry_url }}"
@@ -102,4 +103,4 @@
       become: true
       changed_when: false
 
-    # TODO: Add a healthcheck for the container
+# TODO: Add a healthcheck for the container
