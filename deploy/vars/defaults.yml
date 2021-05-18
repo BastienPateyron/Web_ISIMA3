@@ -4,7 +4,7 @@ registry_url: "https://ghcr.io"
 
 create_containers: 1
 default_container_name: portfolio
-default_container_image: "{{ registry }}/{{ image_name }}:latest"
+default_container_image: "{{ registry }}/{{ image_name }}"
 default_container_command: sleep 1d
 default_container_application_port: "80:80"
 
