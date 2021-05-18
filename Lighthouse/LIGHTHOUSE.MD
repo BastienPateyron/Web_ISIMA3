@@ -26,7 +26,8 @@ La photo est beaucoup trop lourde (8 Mo à elle seule)
 3. Mettre un cache plus long
 
 #### Nouveau score
-TODO
+**98/100 (+ 26)**
+
 
 ### Eliminate render-blocking ressources
 #### Problème
