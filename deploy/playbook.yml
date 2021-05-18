@@ -15,12 +15,12 @@
         baseurl: https://download.docker.com/linux/centos/7/x86_64/stable
         gpgkey: https://download.docker.com/linux/centos/gpg
 
-    # - name: Remove old content
-    #   become: true
-    #   yum:
-    #     name: "{{ item }}"
-    #     state: absent
-    #   loop: ['docker-ce', 'python-virtualenv', 'gcc', 'python2-pip', 'python3-pip', 'epel-release']
+    - name: Remove old content
+      become: true
+      yum:
+        name: "{{ item }}"
+        state: absent
+      loop: ['docker-ce', 'python-virtualenv', 'gcc', 'python2-pip', 'python3-pip', 'epel-release']
 
     - name: Install EPEL
       package:
@@ -41,9 +41,15 @@
         enabled: yes
       become: true
     
-    - name: Install Docker module for Python
+    - name: Remove pip tools
       pip:
         name: docker-py
+        state: absent
+      become: true
+
+    - name: Install Docker module for Python
+      pip:
+        name: docker
       become: true
 
     - name: Login to Github Docker registry
