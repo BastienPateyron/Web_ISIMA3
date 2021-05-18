@@ -188,6 +188,8 @@ h2 {
 }
 
 /* @media (max-width: 1200px) { */
+
+/*  TODO   */
 @media (max-height: 900px) and (max-width: 900px){
     .flip-card {
         width: 275px;
