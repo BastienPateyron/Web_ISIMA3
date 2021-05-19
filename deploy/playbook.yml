@@ -7,100 +7,10 @@
 
   tasks:
 
-    - name: Configure repository
-      become: true
-      yum_repository:
-        name: docker
-        description: Docker repository
-        baseurl: https://download.docker.com/linux/centos/7/x86_64/stable
-        gpgkey: https://download.docker.com/linux/centos/gpg
+    - name: Install Docker
+      include: "{{ playbook_dir }}/tasks/install-docker-centos.yml"
 
-    # - name: Remove old content
-    #   become: true
-    #   yum:
-    #     name: "{{ item }}"
-    #     state: absent
-    #   loop: ['docker-ce', 'python-virtualenv', 'gcc', 'python2-pip', 'python3-pip', 'epel-release']
-
-    - name: Install EPEL
-      package:
-        name: epel-release
-        state: present
-      become: true
-
-    - name: Install Docker and pip
-      package:
-        name: "{{ item }}"
-      loop: ['docker-ce', 'python-pip']
-      become: true
-
-    - name: Start and enable the Docker daemon
-      service:
-        name: docker
-        state: started
-        enabled: true
-      become: true
-
-    # - name: Remove pip tools
-    #   pip:
-    #     name: docker
-    #     state: absent
-    #   become: true
-
-    - name: Install Docker module for Python
-      pip:
-        name: docker-py
-      become: true
-
-    - name: Login to Github Docker registry
-      docker_login:
-        registry_url: "{{ registry_url }}"
-        username: "Bastien Pateyron"
-        password: "{{ GITHUB_TOKEN }}"
-      become: true
-      changed_when: false
-
-    - name: Remove old containers
-      docker_container:
-        name: "{{ default_container_name }}{{ item }}"
-        image: "{{ default_container_image }}"
-        state: absent
-        ports:
-          - "{{ default_container_application_port }}"
-      with_sequence: count={{ create_containers }}
-      become: true
-
-    - name: Remove old image
-      docker_image:
-        state: absent
-        name: "{{ default_container_image }}"
-        tag: latest
-      become: true
-
-    - name: Pull Docker image
-      docker_image:
-        name: "{{ default_container_image }}"
-        source: pull
-      become: true
-
-    - name: Create and start containers
-      docker_container:
-        name: "{{ default_container_name }}{{ item }}"
-        image: "{{ default_container_image }}"
-        recreate: true
-        state: started
-        ports:
-          - "{{ default_container_application_port }}"
-      with_sequence: count={{ create_containers }}
-      become: true
-
-    - name: Logout from docker registry
-      docker_login:
-        registry_url: "{{ registry_url }}"
-        username: "Bastien Pateyron"
-        password: "{{ GITHUB_TOKEN }}"
-        state: absent
-      become: true
-      changed_when: false
+    - name: Deploy docker image
+      include: "{{ playbook_dir }}/tasks/deploy-docker-image.yml"
 
 # TODO: Add a healthcheck for the container

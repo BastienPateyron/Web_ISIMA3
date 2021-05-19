@@ -1,0 +1,13 @@
+---
+- name: Remove old packages
+  become: true
+  yum:
+    name: "{{ item }}"
+    state: absent
+  loop: ['docker-ce', 'python-virtualenv', 'gcc', 'python2-pip', 'python3-pip', 'epel-release']
+
+- name: Remove pip tools
+  become: true
+  pip:
+    name: docker-py
+    state: absent

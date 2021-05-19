@@ -1,0 +1,32 @@
+---
+- name: Configure repository
+  become: true
+  yum_repository:
+    name: docker
+    description: Docker repository
+    baseurl: https://download.docker.com/linux/centos/7/x86_64/stable
+    gpgkey: https://download.docker.com/linux/centos/gpg
+
+- name: Install EPEL
+  become: true
+  package:
+    name: epel-release
+    state: present
+
+- name: Install Docker and pip
+  become: true
+  package:
+    name: "{{ item }}"
+  loop: ['docker-ce', 'python-pip']
+
+- name: Start and enable the Docker daemon
+  become: true
+  service:
+    name: docker
+    state: started
+    enabled: true
+
+- name: Install Docker module for Python
+  become: true
+  pip:
+    name: docker<5
