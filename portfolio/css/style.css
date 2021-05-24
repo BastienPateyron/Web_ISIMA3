@@ -38,6 +38,8 @@ body {
 
 #navbarNav {
     justify-content: center;
+    background-color: var(--main-bg-color);
+    opacity: 0.9;
 }
 
 section {
@@ -232,6 +234,10 @@ h2 {
         height: 320px;
         perspective: 1000px;
         margin-bottom: 5%;
+    }
+
+    .title, .mobile-useless {
+        display: none;
     }
 }
 
