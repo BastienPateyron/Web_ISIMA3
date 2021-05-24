@@ -11,7 +11,7 @@ function hideAllCards() {
 * Hide all flipped card first
 */
 function displayCard(id) {
-    console.log(id)
+    // console.log(id)
     hideAllCards()
     // querySelector sélectionne le premier match de la classe 'card-text' parmi l'élement de notre id
     var text = document.getElementById(id).querySelector('.card-text')

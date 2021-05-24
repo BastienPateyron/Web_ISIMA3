@@ -44,7 +44,7 @@ body {
 
 section {
     padding-top: var(--navbar-height);
-    height: 100vh;
+    /* height: 100vh; */
 }
 
 h1 {
@@ -172,9 +172,9 @@ h2 {
 
 @media (min-width: 1200px) {
     .btn-primary{
-    width:30%;
-    padding: 2%;
-    margin-bottom: 10%;
+        width:30%;
+        padding: 2%;
+        margin-bottom: 0;
     }
 
     span.title {
