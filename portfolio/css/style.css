@@ -2,6 +2,7 @@
     --main-bg-color: black;
     --main-color: whitesmoke;
     --main-emphasize-color: #FCC38E;
+    --main-emphasize-color-darker: #f09d54;
     --navbar-height: 10vh;
     --carousel-margin: 5%;
 }
@@ -79,6 +80,13 @@ h2 {
     background-color: var(--main-emphasize-color);
     color: var(--main-bg-color);
     border: none;
+}
+
+.btn-primary:hover,
+.btn-primary:hover,
+.btn-primary:active {
+    background-color: var(--main-emphasize-color-darker);
+    color: var(--main-bg-color);
 }
 
 #social {
