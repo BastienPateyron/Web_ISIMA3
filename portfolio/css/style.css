@@ -170,24 +170,25 @@ h2 {
 
   /* END Flipcards */
 
-  .ligneFormation {
+.ligneFormation {
     padding: 2.5% 0;
-  }
+}
 
-  .borderBottom {
-      border-bottom: 1px solid;
-      border-color: var(--main-emphasize-color);
-  }
+.borderBottom {
+    border-bottom: 1px solid;
+    border-color: var(--main-emphasize-color);
+}
 
-  .lieu {
-      font-size: 20px;
-      /* font-weight: bolder; */
-  }
+.lieu {
+    font-size: 20px;
+    /* font-weight: bolder; */
+}
 
-  .activite {
-      font-style: italic;
-      color:var(--main-emphasize-color)
-  }
+.activite {
+    font-size: 20px;
+    font-style: italic;
+    color:var(--main-emphasize-color)
+}
 
 @media (min-width: 1200px) {
     .btn-primary {
@@ -253,9 +254,11 @@ h2 {
 .carousel-item-next,
 .carousel-item-prev {
     display:block;
+    padding: 5% 10%;
 }
 
 .carousel-control-next,
 .carousel-control-prev {
     width: var(--carousel-margin);
+    /* align-items: flex-end; */
 }
