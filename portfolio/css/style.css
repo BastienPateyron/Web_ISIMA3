@@ -7,6 +7,14 @@
     --carousel-margin: 5%;
 }
 
+@font-face {
+    font-family: 'Raleway';
+    font-style: normal;
+    font-weight: 400;
+    src: url(https://fonts.gstatic.com/s/raleway/v19/1Ptxg8zYS_SKggPN4iEgvnHyvveLxVvaorCIPrE.woff2) format('woff2');
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
 body {
     background-color: var(--main-bg-color);
     color: var(--main-color);
@@ -162,26 +170,27 @@ h2 {
 
   /* END Flipcards */
 
-  .ligneFormation{
+  .ligneFormation {
     padding: 2.5% 0;
   }
 
-  .borderBottom{
+  .borderBottom {
       border-bottom: 1px solid;
       border-color: var(--main-emphasize-color);
   }
-  .diplome{
-      font-size: 20px;
-      font-weight: bolder;
-  }
 
   .lieu {
+      font-size: 20px;
+      /* font-weight: bolder; */
+  }
+
+  .activite {
       font-style: italic;
       color:var(--main-emphasize-color)
   }
 
 @media (min-width: 1200px) {
-    .btn-primary{
+    .btn-primary {
         width:30%;
         padding: 2%;
         margin-bottom: 0;
@@ -198,7 +207,7 @@ h2 {
     }
 }
 
-@media (max-height: 900px) and (max-width: 900px){
+@media (max-height: 900px) and (max-width: 900px) {
     .flip-card {
         width: 275px;
         height: 320px;
@@ -242,7 +251,7 @@ h2 {
 
 .carousel-item.active,
 .carousel-item-next,
-.carousel-item-prev{
+.carousel-item-prev {
     display:block;
 }
 
