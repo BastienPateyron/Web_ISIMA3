@@ -186,7 +186,7 @@ h2 {
 
 .activite {
     font-size: 20px;
-    font-style: italic;
+    /* font-style: italic; */
     color:var(--main-emphasize-color)
 }
 
@@ -260,5 +260,4 @@ h2 {
 .carousel-control-next,
 .carousel-control-prev {
     width: var(--carousel-margin);
-    /* align-items: flex-end; */
 }
