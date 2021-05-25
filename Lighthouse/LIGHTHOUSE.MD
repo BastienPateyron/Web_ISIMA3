@@ -5,8 +5,24 @@
 #### Problème
 La photo est beaucoup trop lourde (8 Mo à elle seule)
 
-#### Solution : Réduire la taille  
-J'ai passé ma photo au format webp. Je suis passé de 8 Mo à 670 Kb
+#### Solution : Optimiser la taille de la photo  
+1. J'ai passé ma photo au format webp. Je suis passé de 8 Mo à 670 Kb
+2. Je propose différents résolutions de photo en fonction de la taille de l'écran
+
+Pour cela j'utilise l'attribut 'srcset' de la balise img comme suit:
+```html
+<img 
+    title="Photo de Bastien" 
+    alt="Photo de Bastien"
+    class="myphoto"
+    src="images/photo/photo-256.webp"
+    srcset="
+    images/photo/photo-1024.webp  1800w,
+    images/photo/photo-512.webp   1300w,
+    images/photo/photo-256.webp   1000w,
+    images/photo/photo-128.webp    800w,
+">  
+```
 
 #### Nouveau score
 **98/100 (+ 26)**
