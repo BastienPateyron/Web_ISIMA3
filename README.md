@@ -1,7 +1,13 @@
 # Portfolio
 This is the repository containing a basic web project made in practical courses.
 
-## Deployment
+## Lighthouse
+There is a folder dedicated to the tests ran by lighthouse.  
+There is a first .html file to show the results of the tool before any changes.  
+There is a second .html file to show the results of the tool once all of the optimisation has been applied.  
+Those optimisations are explained in the `LIGHTHOUSE.md` file
+
+## Continuous Delivery
 Besides of the basic web development concepts in this project, I also used this opportunity to play with some DevOps features and tools available on GitHub.
 
 Those tools are mainly *GitHub actions* and *GitHub secrets*  
